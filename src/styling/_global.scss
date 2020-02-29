@@ -1,0 +1,23 @@
+body,
+html {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  background-image: linear-gradient(#4e2379, #d4007f);
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: transparentize($black, 0.5);
+    content: "";
+  }
+}
