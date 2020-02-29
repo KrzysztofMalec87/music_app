@@ -1,4 +1,5 @@
 import { Reducer } from 'redux';
+
 import { AppStateinterface } from '../interfaces';
 
 const initialState: AppStateinterface = {
