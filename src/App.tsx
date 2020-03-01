@@ -3,6 +3,16 @@ import { Provider } from 'react-redux';
 
 import store from './store';
 
-const App: React.FC = () => <Provider store={store}>sample</Provider>;
+import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
+import Form from './components/form/Form';
+
+const App: React.FC = () => (
+  <Provider store={store}>
+    <Header />
+    <Form />
+    <Footer />
+  </Provider>
+);
 
 export default App;
