@@ -5,6 +5,8 @@ html {
 
 body {
   position: relative;
+  padding-bottom: 40px;
+  font-family: 'Titillium Web';
   background-image: linear-gradient(#4e2379, #d4007f);
   background-repeat: no-repeat;
   background-size: contain;
@@ -17,7 +19,8 @@ body {
     display: block;
     width: 100%;
     height: 100%;
-    background: transparentize($black, 0.5);
-    content: "";
+    background: $black url(../../images/bg.png) repeat top left / auto auto;
+    opacity: 0.05;
+    content: '';
   }
 }
