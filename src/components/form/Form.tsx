@@ -27,7 +27,7 @@ const Form: React.FC = () => {
 
   return (
     <div className="c-form">
-      <form className="form-group c-form__container" onSubmit={handleSubmit}>
+      <form className="form-group c-form__container" onSubmit={handleSubmit} autoComplete="off">
         <label className="c-form__label" htmlFor="search_query">
           <span className="c-form__label-span">Search your music:</span>
         </label>
