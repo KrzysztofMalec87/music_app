@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from 'axios';
 import { Youtube } from './enums';
 
-const youtubeSearchResults = (searchQuery: string): Promise<AxiosResponse<AxiosResponse<unknown>>> =>
+const youtubeSearchResults = (searchQuery?: string): any =>
   axios.get<AxiosResponse>(Youtube.YOUTUBE_SEARCH_LINK, {
     params: {
       q: searchQuery,
