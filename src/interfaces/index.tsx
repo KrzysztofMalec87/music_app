@@ -1,3 +1,3 @@
 export interface AppStateinterface {
-  sample: string;
+  queryResults: object[];
 }
