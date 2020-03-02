@@ -1,11 +1,14 @@
 .c-search-list-item {
+  position: relative;
   display: flex;
   width: calc(50% - 10px);
   margin: 5px;
   margin-bottom: 10px;
   padding: 20px;
+  padding-right: 60px;
   border: 1px solid $indigo-dark;
   border-radius: $border-radius;
+  overflow: hidden;
   background: transparentize($purple, 0.5);
   box-shadow: inset 0px 0px 27px 0px rgba(0, 0, 0, 0.5);
 

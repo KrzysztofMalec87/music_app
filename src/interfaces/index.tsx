@@ -1,12 +1,8 @@
-export interface SearchItemInterfaceDeeper {
-  title?: string;
-  url?: string;
+export interface SearchItemInterface {
+  key: number;
+  prop: object;
 }
 
 export interface AppStateinterface {
   queryResults: object[];
-}
-
-export interface SearchItemInterface {
-  prop: SearchItemInterfaceDeeper;
 }
