@@ -26,10 +26,23 @@ const Form: React.FC = () => {
   };
 
   return (
-    <form className="c-form" onSubmit={handleSubmit}>
-      <input type="text" name="search_query" ref={textInputSearchRef} />
-      <button>Search</button>
-    </form>
+    <div className="c-form">
+      <form className="form-group c-form__container" onSubmit={handleSubmit}>
+        <label className="c-form__label" htmlFor="search_query">
+          <span className="c-form__label-span">Search your music:</span>
+        </label>
+        <input
+          className="form-control c-form__input"
+          name="search_query"
+          ref={textInputSearchRef}
+          required
+          type="text"
+          id="search_query"
+          placeholder=".. type your music title"
+        />
+        <button className="btn btn-primary c-form__button">Search</button>
+      </form>
+    </div>
   );
 };
 
