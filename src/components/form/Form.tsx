@@ -1,18 +1,28 @@
 import React, { useRef } from 'react';
+import { useDispatch } from 'react-redux';
 
+import { changeQueryResults } from '../../actions';
 import { youtubeSearchResults } from '../../common/fetch';
 
 const Form: React.FC = () => {
   const textInputSearchRef = useRef<HTMLInputElement>(null);
+  const dispatch = useDispatch();
 
   const handleSubmit = async (event: React.FormEvent): Promise<void> => {
     event.preventDefault();
 
-    const searchInputVal = textInputSearchRef.current!.value;
+    const searchInputVal = textInputSearchRef.current?.value;
 
     const response = await youtubeSearchResults(searchInputVal);
+    const {
+      data: { items: queryResponseItems },
+    } = response;
 
-    console.log(response);
+    if (!queryResponseItems) {
+      return;
+    }
+
+    dispatch(changeQueryResults(queryResponseItems));
   };
 
   return (
