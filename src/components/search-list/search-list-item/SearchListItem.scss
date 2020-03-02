@@ -1,0 +1,23 @@
+.c-search-list-item {
+  display: flex;
+  width: calc(50% - 10px);
+  margin: 5px;
+  margin-bottom: 10px;
+  padding: 20px;
+  border: 1px solid $indigo-dark;
+  border-radius: $border-radius;
+  background: transparentize($purple, 0.5);
+  box-shadow: inset 0px 0px 27px 0px rgba(0, 0, 0, 0.5);
+
+  &__image {
+    margin-right: 20px;
+    border: 1px solid $indigo-dark;
+    border-radius: $border-radius;
+  }
+
+  &__heading {
+    color: $yellow;
+    font-weight: $font-weight-normal;
+    font-size: 16px;
+  }
+}
