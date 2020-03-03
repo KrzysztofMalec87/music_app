@@ -5,4 +5,9 @@ export interface SearchItemInterface {
 
 export interface AppStateinterface {
   queryResults: object[];
+  playlist: object[];
+}
+
+export interface OneKeyObjectInterface {
+  [key: string]: object;
 }
