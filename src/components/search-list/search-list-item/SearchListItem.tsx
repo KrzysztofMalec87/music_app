@@ -3,8 +3,8 @@ import React from 'react';
 import { SearchItemInterface } from '../../../interfaces';
 import SearchListButton from '../search-list-button/SearchListButton';
 
-const SearchListItem: React.FC<SearchItemInterface> = prop => {
-  const { title, url }: any = prop.prop;
+const SearchListItem: React.FC<SearchItemInterface> = ({ prop }: SearchItemInterface) => {
+  const { title, url }: any = prop;
 
   return (
     <div className="c-search-list-item">
@@ -12,7 +12,7 @@ const SearchListItem: React.FC<SearchItemInterface> = prop => {
       <div className="c-search-list-item__container">
         <h3 className="c-search-list-item__heading">{title}</h3>
       </div>
-      <SearchListButton />
+      <SearchListButton videoDetails={prop} />
     </div>
   );
 };
