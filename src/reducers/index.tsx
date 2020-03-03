@@ -4,6 +4,7 @@ import { AppStateinterface } from '../interfaces';
 
 const initialState: AppStateinterface = {
   queryResults: [],
+  playlist: [],
 };
 
 const rootReducer: Reducer = (state = initialState, action) => {
@@ -12,6 +13,11 @@ const rootReducer: Reducer = (state = initialState, action) => {
       return {
         ...state,
         queryResults: action.payload,
+      };
+    case 'ADD_TO_PLAYLIST':
+      return {
+        ...state,
+        playlist: [...state.playlist, action.payload],
       };
 
     default:
