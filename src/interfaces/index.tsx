@@ -11,3 +11,8 @@ export interface AppStateinterface {
 export interface OneKeyObjectInterface {
   [key: string]: object;
 }
+
+export interface PlaylistButtonInterface {
+  triggerPlaylist: any;
+  count: number;
+}
