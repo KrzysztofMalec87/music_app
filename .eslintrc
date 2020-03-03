@@ -5,7 +5,8 @@
   },
   "parser": "@typescript-eslint/parser",
   "plugins": [
-    "react"
+    "react",
+    "react-hooks"
   ],
   "extends": [
     "plugin:react/recommended",
@@ -15,6 +16,8 @@
   ],
   "rules": {
     "arrow-body-style": ["error", "as-needed"],
-    "@typescript-eslint/no-explicit-any": 0
+    "@typescript-eslint/no-explicit-any": 0,
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
   }
 }
