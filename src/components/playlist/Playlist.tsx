@@ -18,8 +18,7 @@ const Playlist: React.FC = () => {
   return (
     <>
       <div className={`c-playlist${activeClass}`}>
-        <h1>:)</h1>
-        <button onClick={handleRemoveActiveClass}>Click</button>
+        <button className="c-playlist__close" onClick={handleRemoveActiveClass}></button>
       </div>
       <PlaylistButton count={playlistItemsCount} triggerPlaylist={handleAddActiveClass} />
     </>

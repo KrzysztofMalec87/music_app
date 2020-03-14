@@ -22,4 +22,32 @@
   &--visible {
     right: 0;
   }
+
+  &__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    background: transparent;
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: block;
+      width: 60%;
+      height: 1px;
+      background: transparentize($white, 0.5);
+      transform: translate(-50%, -50%) rotate(45deg);
+      content: '';
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
 }
