@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import { AppStateinterface } from '../../interfaces/';
 
 import PlaylistButton from './playlist-button/PlaylistButton';
+import PlaylistItem from './playlist-item/PlaylistItem';
 
 const Playlist: React.FC = () => {
   const ACTIVE_CLASS = ' c-playlist--visible';
@@ -19,6 +20,9 @@ const Playlist: React.FC = () => {
     <>
       <div className={`c-playlist${activeClass}`}>
         <button className="c-playlist__close" onClick={handleRemoveActiveClass}></button>
+        <h3 className="c-playlist__heading">Your list</h3>
+        {playlistItemsCount > 0 &&
+          playlistItems.map((data, index) => <PlaylistItem index={index} key={Math.random()} data={data} />)}
       </div>
       <PlaylistButton count={playlistItemsCount} triggerPlaylist={handleAddActiveClass} />
     </>
