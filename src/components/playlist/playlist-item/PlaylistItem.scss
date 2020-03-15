@@ -1,0 +1,38 @@
+.c-playlist-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  padding-right: 80px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid transparentize($white, 0.9);
+  color: $white;
+  font-size: 14px;
+
+  &__img {
+    width: 100%;
+    max-width: 60px;
+    margin-right: 10px;
+    border-radius: $border-radius;
+  }
+
+  &__button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    background: red;
+
+    &:focus {
+      outline: none;
+    }
+
+    &--play {
+      right: 40px;
+      background: green;
+    }
+  }
+}

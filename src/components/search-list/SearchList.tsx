@@ -15,12 +15,12 @@ const SearchList: React.FC = () => {
         snippet: {
           title,
           thumbnails: {
-            default: { url },
+            default: { url: imageUrl },
           },
         },
       }: any = item;
 
-      searchList.push({ videoId, title, url });
+      searchList.push({ videoId, title, imageUrl });
     });
   }
 
