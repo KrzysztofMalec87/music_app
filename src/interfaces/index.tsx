@@ -6,6 +6,7 @@ export interface SearchItemInterface {
 export interface AppStateinterface {
   queryResults: object[];
   playlist: object[];
+  currentPlayed: number | null;
 }
 
 export interface OneKeyObjectInterface {
@@ -15,4 +16,9 @@ export interface OneKeyObjectInterface {
 export interface PlaylistButtonInterface {
   triggerPlaylist: any;
   count: number;
+}
+
+export interface PlayListItemInterface {
+  data: any;
+  index: any;
 }
