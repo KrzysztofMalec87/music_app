@@ -5,6 +5,7 @@ import { AppStateinterface } from '../interfaces';
 const initialState: AppStateinterface = {
   queryResults: [],
   playlist: [],
+  currentPlayed: null,
 };
 
 const rootReducer: Reducer = (state = initialState, action) => {
@@ -18,6 +19,16 @@ const rootReducer: Reducer = (state = initialState, action) => {
       return {
         ...state,
         playlist: [...state.playlist, action.payload],
+      };
+    case 'REMOVE_FROM_PLAYLIST':
+      return {
+        ...state,
+        playlist: action.payload,
+      };
+    case 'SET_CURRENT_PLAYED':
+      return {
+        ...state,
+        currentPlayed: action.payload,
       };
 
     default:
