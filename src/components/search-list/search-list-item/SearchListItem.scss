@@ -1,8 +1,7 @@
 .c-search-list-item {
   position: relative;
   display: flex;
-  width: calc(50% - 10px);
-  margin: 5px;
+  width: 100%;
   margin-bottom: 10px;
   padding: 20px;
   padding-right: 60px;
@@ -11,16 +10,28 @@
   overflow: hidden;
   background: transparentize($purple, 0.5);
   box-shadow: inset 0px 0px 27px 0px rgba(0, 0, 0, 0.5);
+  @include media-breakpoint-up(md) {
+    width: calc(50% - 10px);
+    margin: 5px;
+  }
 
   &__image {
+    width: auto;
+    height: 40px;
     margin-right: 20px;
     border: 1px solid $indigo-dark;
     border-radius: $border-radius;
+    @include media-breakpoint-up(md) {
+      height: auto;
+    }
   }
 
   &__heading {
     color: $yellow;
     font-weight: $font-weight-normal;
-    font-size: 16px;
+    font-size: 12px;
+    @include media-breakpoint-up(md) {
+      font-size: 16px;
+    }
   }
 }

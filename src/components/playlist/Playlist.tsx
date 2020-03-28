@@ -21,7 +21,7 @@ const Playlist: React.FC = () => {
   const handleRemoveActiveClass = (): void => toogleActiveClass('');
 
   useEffect(() => {
-    if (playlistItemsCount === 0 && playlistInSession.length) {
+    if (playlistItemsCount === 0 && playlistInSession && playlistInSession.length) {
       dispatch(setSessionPlaylist(playlistInSession));
     }
   });
