@@ -1,13 +1,17 @@
-import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import React, { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 
 import { AppStateinterface } from '../../interfaces/';
+import { getStoragePlaylist } from '../../common/functions';
+import { setSessionPlaylist } from '../../actions/';
 
 import PlaylistButton from './playlist-button/PlaylistButton';
 import PlaylistItem from './playlist-item/PlaylistItem';
 
 const Playlist: React.FC = () => {
   const ACTIVE_CLASS = ' c-playlist--visible';
+  const playlistInSession = getStoragePlaylist();
+  const dispatch = useDispatch();
   const [activeClass, toogleActiveClass] = useState('');
   const playlistItems = useSelector<AppStateinterface, object[]>(state => state.playlist);
   const playlistItemsCount = playlistItems.length;
@@ -15,6 +19,12 @@ const Playlist: React.FC = () => {
   const handleAddActiveClass = (): void => toogleActiveClass(ACTIVE_CLASS);
 
   const handleRemoveActiveClass = (): void => toogleActiveClass('');
+
+  useEffect(() => {
+    if (playlistItemsCount === 0 && playlistInSession.length) {
+      dispatch(setSessionPlaylist(playlistInSession));
+    }
+  });
 
   return (
     <>

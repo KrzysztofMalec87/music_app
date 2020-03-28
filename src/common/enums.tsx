@@ -3,4 +3,8 @@ const Youtube = {
   YOUTUBE_SEARCH_LINK: process.env.REACT_APP_YOUTUBE_SEARCH_LINK || '',
 };
 
-export { Youtube };
+const Constants = {
+  SESSION_PLAYLIST_NAME: 'musicAppPlaylist',
+};
+
+export { Youtube, Constants };

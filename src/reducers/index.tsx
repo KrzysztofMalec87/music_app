@@ -30,6 +30,11 @@ const rootReducer: Reducer = (state = initialState, action) => {
         ...state,
         currentPlayed: action.payload,
       };
+    case 'SET_SESSION_PLAYLIST':
+      return {
+        ...state,
+        playlist: action.payload,
+      };
 
     default:
       return state;

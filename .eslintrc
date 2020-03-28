@@ -18,6 +18,7 @@
     "arrow-body-style": ["error", "as-needed"],
     "@typescript-eslint/no-explicit-any": 0,
     "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn"
+    "react-hooks/exhaustive-deps": "warn",
+    "@typescript-eslint/camelcase": ["error", {"allow": ["cc_load_policy", "iv_load_policy"]}]
   }
 }

@@ -17,3 +17,8 @@ export const setCurrentPlayed = (index: number): object => ({
   type: 'SET_CURRENT_PLAYED',
   payload: index,
 });
+
+export const setSessionPlaylist = (array: any): object => ({
+  type: 'SET_SESSION_PLAYLIST',
+  payload: array,
+});
